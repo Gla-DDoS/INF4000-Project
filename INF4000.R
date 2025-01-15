@@ -84,7 +84,7 @@ chart4 <- team_stats %>%
   select(IsHomeTeam, Yellow.Cards, Red.Cards) %>%
   pivot_longer(cols = c(Yellow.Cards, Red.Cards), names_to = "CardType", values_to = "Count")
 
-# Create the box plot for yellow and red cards
+
 boxplot_cards <- ggplot(chart4, aes(x = CardType, y = Count, fill = IsHomeTeam)) +
   geom_boxplot(alpha = 0.7) +
   labs(
